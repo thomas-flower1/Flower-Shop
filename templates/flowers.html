@@ -1,0 +1,14 @@
+{% extends 'base.html'}
+
+{% block main_content %}
+<table>
+    {% for flower in flowers %}
+    <tr>
+        <td>{{flower['flower_name']}}</td>
+        <td>{{flower['price']}}</td>
+        <td>{{flower['img']}}</td>
+    </tr>
+</table>
+
+
+{% endblock %}
