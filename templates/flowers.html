@@ -1,14 +1,45 @@
-{% extends 'base.html'}
+{% extends 'base.html' %}
 
 {% block main_content %}
-<table>
-    {% for flower in flowers %}
-    <tr>
-        <td>{{flower['flower_name']}}</td>
-        <td>{{flower['price']}}</td>
-        <td>{{flower['img']}}</td>
-    </tr>
-</table>
+
+{% set counter = 2 %}
+<main>
 
 
-{% endblock %}
+
+    <nav>
+        <h2></h2>
+        <h2><a href="{{url_for('flowers')}}">thomas's flower shop</a></h2>
+        <h2><a href="{{url_for('login')}}">login</a></h2>
+    </nav>
+    <div id="banner">
+        <img src="/static/banner.jpg" alt="">
+    </div>
+    
+
+
+
+
+    <div id="container">
+        {% for flower in flowers %}
+
+        <div id="flower">
+            <a href="">
+                {{flower['flower_name']}}
+                <br>
+                {{flower['price']}}
+                <br>
+                <img src="{{ url_for('static', filename=flower['img_url'])}}" alt="">
+            </a>
+        </div>
+
+
+        {% endfor %}
+
+    </div>
+
+
+
+    {% endblock %}
+
+</main>
