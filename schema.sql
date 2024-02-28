@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users 
 (
-    user_id INTEGER PRIMARY KEY,
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
     email TEXT NOT NULL,
     password TEXT NOT NULL
@@ -22,4 +22,9 @@ INSERT INTO flowers (flower_name, price)
 VALUES 
     ('Sunflower', 10.99),
     ('Poppy', 1000000.01),
-    ('Rose', 1.99)
+    ('Rose', 1.99);
+
+
+INSERT INTO users (username, email, password)
+VALUES 
+    ('administractor', 'name@email.com', 123456789);
