@@ -26,5 +26,14 @@ class FilterForm(FlaskForm):
 class EditTableForm(FlaskForm):
     pass
 
+class AddToBasketForm(FlaskForm):
+    addToBasket = SubmitField('Add to basket')
+
+class BasketForm(FlaskForm):
+    delete = SubmitField('Delete')
+    completePurchase = SubmitField('Complete Purchase')
+
+
+
 
 

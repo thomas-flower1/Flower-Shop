@@ -29,6 +29,14 @@ VALUES
     ('Roses', 49.99, 'rose.jpg'),
     ('Carnation', 59.99, 'carnation.jpg'),
     ('Poppy', 10000.99, 'poppy.jpg');
+
+
+
+SELECT * 
+FROM flowers
+WHERE flower_id = 2;
+
+
    
 
 
@@ -40,5 +48,3 @@ VALUES
 
 DROP TABLE IF EXISTS basket;
 
-CREATE TABLE basket
-(
