@@ -1,1 +1,37 @@
-Credits for photos
+# My Flower Shop
+This is my final flask project for Web Development 2
+
+## Main Page
+The main page is where you can browse my lovely selection of flowers and also click to add to basket or see the description. The main page 
+contains the following:
+    - Ability to search for certain flowers
+    - Sort the flowers listed from high to low and low to high
+    - Add flowers to basket
+    - Click on flowers to see a description
+
+It should be noted that both login and the basket are accessable from the main page.
+
+## Account
+You are able to create and login to a brand new account. If you forget your password you can also reset by using your email.
+Your account keeps track of your points, which you gain on purchase, aswell as your username, email, payment methods and address.
+
+## Basket
+The basket uses sessions to keep track of items you may purchase. It has the following:
+    - Add to basket
+    - Delete from basket
+    - Incriment basket 
+    - Decriment basket
+    - Display total cost of basket
+    - Purchase
+
+
+## Admin
+If you are logged in as an Admin (usernmae:Admin, Password:Admin123) you will gain the following:
+    - Update prices of current flowers in the database
+    - Add new enteries into the databse
+    - delete enteries
+
+
+
+Credits for photos:
+

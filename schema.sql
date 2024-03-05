@@ -5,7 +5,8 @@ CREATE TABLE users
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
     email TEXT NOT NULL,
-    password TEXT NOT NULL
+    password TEXT NOT NULL,
+    points INTEGER
 );
 
 DROP TABLE IF EXISTS flowers;
@@ -32,19 +33,10 @@ VALUES
 
 
 
+SELECT *
+FROM users;
+
 SELECT * 
 FROM flowers
-WHERE flower_id = 2;
-
-
-   
-
-
-INSERT INTO users (username, email, password)
-VALUES 
-    ('administractor', 'name@email.com', 123456789),
-    ('thomas', 'flowersthomas434@gmail.com', 123);
-
-
-DROP TABLE IF EXISTS basket;
+WHERE flower_name LIKE '%sun%';
 
