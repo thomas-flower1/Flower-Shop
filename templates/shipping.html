@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.name.label}}
+        <br>
+        {{ form.name()}}
+        <br>
+        {{ form.address_line_1.label }}
+        <br>
+        {{ form.address_line_1() }}
+        <br>
+        {{ form.address_line_2.label }}
+        <br>
+        {{ form.address_line_2() }}
+        <br>
+        {{ form.save_address()}}
+        <br>
+        {{ form.submit()}}
+        
+    </form>
+
+{% endblock %}

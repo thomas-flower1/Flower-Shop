@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<form action="" method="POST" novalidate enctype="multipart/form-data">
+   {{ form.hidden_tag() }}
+
+   {{ form.flower_name.label }}
+    <br>
+    {{ form.flower_name() }}
+    {% for error in form.flower_name.errors %}
+    {{ error }}
+    {% endfor %}
+    <br>
+    {{ form.price.label}}
+    <br>
+    {{ form.price() }}
+    <br>
+    {{ form.photo.label}}
+    <br>
+    {{ form.photo() }}
+    <br>
+    {{ form.submit() }}
+    
+</form>
+
+{% endblock %}

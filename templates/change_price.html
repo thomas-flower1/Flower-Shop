@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    {% for flower in current_flower_names %}
+    <p>{{ flower['flower_name'] }}</p>
+    {% endfor %}
+
+    {{ form.flower_name.label }}
+    <br>
+    {{ form.flower_name() }}
+    {% for error in form.flower_name.errors %}
+    {{ error }}
+    {% endfor %}
+    <br>
+    {{ form.new_price.label }}
+    <br>
+    {{ form.new_price() }}
+    <br>
+    {{ form.submit() }}
+
+</form>
+
+{% endblock %}

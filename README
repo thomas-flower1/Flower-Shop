@@ -4,16 +4,22 @@ This is my final flask project for Web Development 2
 ## Main Page
 The main page is where you can browse my lovely selection of flowers and also click to add to basket or see the description. The main page 
 contains the following:
-    - Ability to search for certain flowers
+    - Ability to search for certain flowers (doesn't have to be an exact match)
     - Sort the flowers listed from high to low and low to high
     - Add flowers to basket
     - Click on flowers to see a description
+    - Access your account (You can also add an address here)
+    - Access your basket
+    - Login / Logout (can also reset password through these pages)
 
 It should be noted that both login and the basket are accessable from the main page.
 
 ## Account
 You are able to create and login to a brand new account. If you forget your password you can also reset by using your email.
-Your account keeps track of your points, which you gain on purchase, aswell as your username, email, payment methods and address.
+Why make an account? You gain access to the following:
+    - Free Shipping and also 10% off at checkout
+    - Gain points on purchase (can be seen on account page)
+    - Keep your address saved
 
 ## Basket
 The basket uses sessions to keep track of items you may purchase. It has the following:
@@ -24,14 +30,21 @@ The basket uses sessions to keep track of items you may purchase. It has the fol
     - Display total cost of basket
     - Purchase
 
+## Making a purchase
+To make a purchase simply go to your basket (through the main page). You will be shown your basket before being prompted to continue. If you already have an address and are logged in shipping will be skipped else you will be prompted to enter an address. Then you can continue and make a purchase. 
+
+Note: If you are logged in and don't have an address saved when you enter an address it will be saved to you account (this is optional)
+
 
 ## Admin
 If you are logged in as an Admin (usernmae:Admin, Password:Admin123) you will gain the following:
     - Update prices of current flowers in the database
     - Add new enteries into the databse
-    - delete enteries
-
-
+   
+## Credit
+For uploading the user images to flask I did user code from the tutorial: [text](https://www.youtube.com/watch?v%3DGeiUTkSAJPs%26t%3D573s%26pp%3DygUQZmxhc2sgc2F2ZSBpbWFnZQ%3D%3D)
+I was struggling to find a solution in the documentation that solved the issue in the way in which we had been learning.
+I used the line: os.path.join((os.path.dirname(__file__)), 'static', filename) and secure_filename(file.filename) to solve this.
 
 Credits for photos:
 

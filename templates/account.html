@@ -1,56 +1,26 @@
 {% extends 'base.html' %}
 
 {% block main_content %}
-<form action="" method="POST" novalidate>
-    <div id="form_container">
-        {{ form.hidden_tag() }}
-        <a href="{{url_for('flowers')}}">thomas' flowers</a>
 
-        <p>Create Account</p>
+{% if username %}
 
-        {{ form.username.label }}
-        <br>
-        {{ form.username() }}
-        {% for error in form.username.errors %}
-            {{ error }}
-        {% endfor %}
-        <br>
+<p>Username: {{ username }}</p>
+<p>Email: {{ email }}</p>
+<p>Points: {{ points }}</p>
 
+<a href="{{ url_for('reset_password')}}">Reset Password?</a>
+<a href="{{ url_for('add_address')}}">Add Address?</a>
 
-        {{ form.email.label }}
-        <br>
-        {{ form.email() }}
-        {% for error in form.email.errors %}
-            {{ error }}
-        {% endfor %}
-        <br>
+{% else %}
+<p>You are not logged in</p>
 
+{% endif %}
 
-        {{ form.password.label }}
-        <br>
-        {{ form.password() }}
-        {% for error in form.password.errors %}
-            {{ error }}
-        {% endfor %}
-        <br>
+{% if username == 'Admin' %}
+<a href="{{ url_for('change_price')}}">Change Price</a>
+<a href="{{ url_for('new_entry')}}">New Entry</a>
 
+{% endif %}
 
-        {{ form.re_password.label }}
-        <br>
-        {{ form.re_password() }}
-        {% for error in form.re_password.errors %}
-            {{ error }}
-        {% endfor %}
-        <br>
-
-        {{ form.submit() }}
-        <br>
-        <a href="{{url_for('login')}}">Already have an account?</a>
-    </div>
-
-    
-
-
-</form>
 
 {% endblock %}
